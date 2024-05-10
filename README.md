@@ -4,8 +4,7 @@ Você já passou horas buscando por algo interessante para ler, assistir ou joga
 
 O Gemini Recomendações é uma plataforma inteligente de recomendação de obras que ajuda você a descobrir novos livros, séries, filmes, jogos e muito mais, com base em seus gostos e preferências únicas. A plataforma permite que os usuários cadastrem obras que já viram, leram ou jogaram, avaliem-nas, deixem comentários e compartilhem suas recomendações com amigos.
 
-Principais Recursos:
-
+**Principais Recursos:**
 * Descoberta Personalizada: Nosso algoritmo de recomendação inteligente analisa as obras que você já consumiu e sugere novas obras com base em seus interesses.
 * Avaliações e Comentários: Avalie obras com uma classificação de 1 a 10 e deixe comentários para ajudar outros usuários a encontrar as melhores recomendações.
 * Diversidade de Mídias: Explore uma ampla variedade de obras, incluindo livros, séries, filmes, jogos e muito mais, tudo em um só lugar.
@@ -13,9 +12,23 @@ Principais Recursos:
 
 O Gemini Recomendações é perfeito para todos os amantes de cultura pop, ávidos leitores, cinéfilos, gamers e qualquer pessoa que queira descobrir novas obras de maneira fácil e divertida.
 
-Diferencial:
+**Diferencial:**
 Personalização: Nossa abordagem de recomendação é altamente personalizada, levando em consideração os gostos individuais de cada usuário.
 Facilidade de Uso: A interface intuitiva e amigável torna a navegação e a interação com a plataforma uma experiência agradável para todos.
 
-Visão Futura:
+**Visão Futura:**
 Estamos comprometidos em continuar melhorando o Gemini Recomendações, adicionando novos recursos, expandindo nossa biblioteca de obras e aprimorando nossos algoritmos de recomendação para proporcionar a melhor experiência possível aos nossos usuários.
+
+**Tecnologias:**
+- Node.js
+- Express
+- MongoDB
+- Mongoose
+- Bootstrap
+- EJS (Embedded JavaScript)
+
+**Executando o Projeto Localmente:**  
+- Clone o repositório do projeto para o seu computador.
+- Instale as dependências utilizando o comando npm install.
+- Inicie o servidor Node.js com o comando node app.js.
+- Acesse o chatbot em seu navegador utilizando o endereço http://localhost:3000.
