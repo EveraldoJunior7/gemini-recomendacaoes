@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat Gemini</title>
-    <!-- Adicionar o link para o Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         #chat-box {
@@ -33,7 +32,9 @@
         </form>
     </div>
 
-    <script>
+    <script type="module">
+          import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
+
         const messageList = document.getElementById('message-list');
         const messageForm = document.getElementById('message-form');
         const messageInput = document.getElementById('message-input');
@@ -59,12 +60,14 @@
             //     body: JSON.stringify({ message })
             //   });
             //   return await response.json();
-            return 'oi';
+            const response = { message: 'oi' };
+            return response;
         }
 
         function exibirMensagem(sender, message) {
             const listItem = document.createElement('li');
-            listItem.textContent = `${sender}: ${message}`;
+            listItem.innerHTML = `<strong>${sender}:</strong> ${marked(message)}`;
+            listItem.classList.add('mb-1');
             messageList.appendChild(listItem);
             messageList.scrollTop = messageList.scrollHeight;
         }
