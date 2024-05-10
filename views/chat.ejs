@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Gemini</title>
+    <!-- Adicionar o link para o Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        #chat-box {
+            height: 300px;
+            overflow-y: scroll;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Bem-vindo ao Chat Gemini</h1>
+        <div id="chat-box" class="mb-3">
+            <ul id="message-list" class="list-unstyled">
+                <!-- Mensagens do chat serão inseridas aqui -->
+            </ul>
+        </div>
+        <form id="message-form" class="mb-4">
+            <div class="input-group">
+                <input type="text" id="message-input" class="form-control" placeholder="Digite sua mensagem...">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const messageList = document.getElementById('message-list');
+        const messageForm = document.getElementById('message-form');
+        const messageInput = document.getElementById('message-input');
+
+        messageForm.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const message = messageInput.value;
+            if (message.trim() !== '') {
+                const response = await enviarMensagem(message);
+                exibirMensagem('Você', message);
+                exibirMensagem('ChatBot', response.message);
+                messageInput.value = '';
+            }
+        });
+
+        async function enviarMensagem(message) {
+            // Substitua a URL pela URL da sua API
+            //   const response = await fetch('URL_DA_SUA_API', {
+            //     method: 'POST',
+            //     headers: {
+            //       'Content-Type': 'application/json'
+            //     },
+            //     body: JSON.stringify({ message })
+            //   });
+            //   return await response.json();
+            return 'oi';
+        }
+
+        function exibirMensagem(sender, message) {
+            const listItem = document.createElement('li');
+            listItem.textContent = `${sender}: ${message}`;
+            messageList.appendChild(listItem);
+            messageList.scrollTop = messageList.scrollHeight;
+        }
+    </script>
+</body>
+
+</html>
